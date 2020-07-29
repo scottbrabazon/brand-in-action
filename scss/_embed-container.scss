@@ -1,0 +1,16 @@
+.embed-container, .embed-container embed, .embed-container iframe, .embed-container object {
+	width: 95%;
+	margin: 0 2.5% 3% 2.5%;
+}
+
+.embed-container {
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.embed-container embed, .embed-container iframe, .embed-container object {
+    height: 100% !important;
+    left: 0;
+    position: absolute;
+    top: 0;
+}

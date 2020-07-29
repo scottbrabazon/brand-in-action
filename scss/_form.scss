@@ -1,0 +1,38 @@
+.contact-form p {
+    margin: 15px 0 0 0;
+}
+
+.contact-form {
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    font-family: 'Museo Sans 300', serif;
+    margin-top: 15px;
+}
+
+.checkbox {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    float: left;
+    label {width: 80%;}
+}
+
+#form1_submit, #form2_submit {
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    font-family: 'BebasNeue', serif;
+    font-size: 3.5em;
+    text-decoration: underline;
+}
+
+#form1_name, #form1_company, #form1_email, #form1_telephone, #form1_message, #form1_position,
+#form2_name, #form2_company, #form2_email, #form2_telephone, #form2_message, #form2_position {
+    width: 100%;
+    color: #000;
+    font-family: 'Museo Sans 300', serif;
+}

@@ -1,0 +1,49 @@
+<perch:form action="#perch-reset" id="contact" method="post" app="perch_forms">
+
+<h1>How Can Brand<br>In Action Bring Your<br>Brand to Life?</h1>
+
+<p>If you want to discuss a project or have any questions, please fill in your details below.</p>
+
+<fieldset>
+
+<div>
+<perch:label for="name">Name:</perch:label>
+<perch:input id="name" required="true" type="text" label="Name" />
+</div>
+
+<div>
+<perch:label for="company">Company:</perch:label>
+<perch:input id="company" required="true" type="text" label="Name" />
+</div>
+
+<div>
+<perch:label for="email">Email:</perch:label>
+<perch:input id="email" required="true" type="text" label="Email" />
+</div>
+
+<div>
+<perch:label for="telephone">Telephone Number:</perch:label>
+<perch:input id="telephone" required="true" type="text" label="Telephone Number" />
+</div>
+
+<div>
+<perch:label for="message">Message:</perch:label>
+<perch:input id="message" required="true" type="textarea" label="Message" />
+</div>
+
+<div>
+<perch:input id="newsletter" required="true" type="checkbox" label="Newsletter Subscription" />
+<perch:label for="newsletter">Send me the email newsletter</perch:label>
+</div>
+
+<div class="submit">
+<perch:input type="submit" id="submit" value="Submit" />
+</div>
+
+</fieldset>
+
+<perch:success>
+<perch:content id="thankyou" label="Success message" type="textarea" textile="true" editor="markitup" />
+</perch:success>
+
+</perch:form>

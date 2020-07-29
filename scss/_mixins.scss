@@ -1,0 +1,261 @@
+/* ==========================================================================
+   General
+   ========================================================================== */
+
+/* Menu */
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+/* ==========================================================================
+   Panel Sizes
+   ========================================================================== */
+
+/* Full Width Mobile */
+
+@mixin bia-panel-full-width-mobile {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	.panel-content {
+		display: inline-block;
+		padding: 40px 5% 25px 5%;
+		width: 100%;
+	}
+}
+
+/* Full Width 2 Column Mobile */
+
+@mixin bia-panel-full-width-mobile-two-column {
+   @include bia-panel-full-width-mobile; 
+   display: inline-block;
+   clear: left;
+   .panel-content {
+		vertical-align: top;
+		padding: 40px 5%;
+		ul {
+			width: 100%;
+		}
+		li {
+			width: 100%;
+		}
+	}	
+}
+
+/* Full Width Desktop */
+
+@mixin bia-panel-full-width-desktop {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	clear: right;
+	.panel-content {
+		display: inline-block;
+		padding: 40px 3.75% 25px 3.75%;
+		width: 100%;
+		img {
+			width: 47.5%;
+			max-width: 521px;
+		}
+		.full-width img {
+			width: 100%;
+			max-width: none;
+		}
+	}
+}
+
+/* Full Width 2 Column Desktop */
+
+@mixin bia-panel-full-width-desktop-two-column {
+   @include bia-panel-full-width-desktop; 
+   display: inline-block;
+   .panel-content {
+		vertical-align: top;
+		padding: 40px 3.75% 25px 3.75%;
+		img {width: 100%;}
+		.full-width img {
+			width: 100%;
+			max-width: none;
+		}
+		ul {
+			width: 100%;
+			vertical-align: center;
+		}
+		li {
+			width: 47.5%;
+			margin-right: 5%;
+			float: left;
+		}
+		li:nth-child(even) {
+			margin: 0;
+		}
+	}	
+}
+
+/* Left Hand Side Desktop */
+
+@mixin bia-panel-half-width-left {
+	width: 50%;
+	float: left;
+	clear: right;
+	.panel-content {
+		padding: 40px 5% 40px 7.5%;
+		width: 100%;
+	}
+}
+
+/* Right Hand Side Desktop */
+
+@mixin bia-panel-half-width-right {
+	width: 50%;
+	float: left;
+	.panel-content {
+		padding: 40px 7.5% 40px 5%;
+		width: 100%;
+	}
+}
+
+/* ==========================================================================
+   Number of Columns
+   ========================================================================== */
+
+/* Two Column */
+
+@mixin two-column {
+	ul {
+		width: 100%;
+	}
+    li {
+    	float: left;
+    	width: 47.5%;
+    	margin: 0 5% 0 0;
+    	img {
+	    	margin: 20px 0 5px 0;
+    	}
+    	p {
+    		font-size: 0.7em;
+    		text-align: center;
+		}	
+    }
+	li:nth-child(even) {
+		margin: 0;
+	}
+}
+
+/* Three Column */
+
+@mixin three-column {
+		ul {
+			width: 100%;
+		}
+	    li {
+	    	float: left;
+	    	width: 30%;
+	    	margin: 0 5% 0 0;
+	    	img {
+		    	width: 100%;
+		    	margin: 20px 0 5px 0;
+	    	}
+	    	p {
+	    		font-size: 0.7em;
+	    		text-align: center;
+			}	
+	    }
+		li:nth-child(even) {
+			margin: 0 5% 0 0;
+		}
+		li:nth-child(3n) {
+			margin: 0;
+		}
+	}
+
+/* ==========================================================================
+Colour Styles
+========================================================================== */
+
+/* Headers */
+
+@mixin green-header {
+	width: 100%;
+	color: white;
+	background: no-repeat;
+	height: 450px;
+	.panel-content {
+		h1 {margin: 0;}
+		margin-top: 90px;
+		img {
+			width: 100%;
+			max-width: none;
+			margin-bottom: 40px;
+		}
+	}	
+}
+
+@mixin green-header-tablet {
+	height: 600px;
+	.panel-content {
+		margin-top: 90px;
+		img {
+			width: 80%;
+			max-width: 800px;
+			margin-bottom: 80px;
+		}
+	}	
+}
+
+@mixin green-header-desktop {
+	width: 100%;
+	.panel-content {
+		margin-top: 90px;
+		img {
+			width: 60%;
+			margin-bottom: 100px;
+		}
+	}	
+}
+
+/* Orange */
+
+@mixin orange-panel {
+	background: url(../img/orange-texture.jpg) no-repeat center;
+	background-size: cover;
+	color: white;
+}
+
+/* Light Grey */
+
+@mixin light-grey-panel {
+	background: url(../img/grey-texture-light.jpg) no-repeat center;
+	background-size: cover;
+	color: #000;
+}
+
+/* Dark Grey */
+
+@mixin dark-grey-panel {
+	background: url(../img/grey-texture-dark.jpg) no-repeat center;
+	background-size: cover;
+	color: #000;
+}
+
+/* Green */
+
+@mixin green-panel {
+	background: url(../img/green-texture.jpg) no-repeat center;
+	background-size: cover;
+	color: white;
+}
+
+/* Lime */
+
+@mixin lime-panel {
+	background: url(../img/lime-texture.jpg) no-repeat center;
+	background-size: cover;
+	color: white;
+}

@@ -1,0 +1,15 @@
+.how-we-do-it-chart {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  height: 0;
+  padding-top: 44%;
+  position: relative;
+  vertical-align: middle;
+}
+.how-we-do-it-chart svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}

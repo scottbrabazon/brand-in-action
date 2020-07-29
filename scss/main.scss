@@ -1,0 +1,964 @@
+/* *******Global******** */
+@import "_normalize.scss";
+@import "_svg-fixes.scss";
+
+/* *******Other******** */
+@import "_bootstrap.min.scss";
+@import "_bootstrap.scss";
+@import "_full-slider.scss";
+
+/* *******Definings******** */
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_type.scss";
+
+/* *******Specific******** */
+@import "_form.scss";
+@import "_animation.scss";
+@import "_nav-menu.scss";
+@import "_embed-container.scss";
+
+/* ==========================================================================
+   General
+   ========================================================================== */
+
+ul, li {
+    list-style: none;
+    margin: 0 ;
+    padding: 0;
+    display: inline-block;
+}
+
+img {
+	margin: 0 0 15px 0;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background: no-repeat;
+	background-position: center top;
+	background-size: auto 450px;
+}
+
+section, article {
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: 0 0 15px 0;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.social {
+	margin-top: 15px;
+	div {
+		float: left;
+		margin-right: 8px;
+	}
+}
+
+.social img {
+	width: 50px;
+}
+
+.anchor-link {
+  display: block;
+  height: 90px;
+  margin-top: -90px;
+  visibility: hidden;
+}
+
+.contact-us-mobile-home form {
+	margin: 50px 0;
+}
+
+.contact-form form {
+	margin: 50px 0;
+}
+
+
+/* ==========================================================================
+   Dispay (Mobile)
+   ========================================================================== */
+
+.logos-grid-1, .logos-grid-2, .logos-grid-4 , .logos-grid-5 {
+	display: none;
+}
+
+.about-us-2, .contact-us, .contact-us-form-desktop, .contact-us-form {
+	display: none;	
+}
+
+.padding-top-fix {
+	display: none;
+}
+
+.anchor-mobile {
+	display: inline;
+	a {text-decoration: none;}
+}
+
+.anchor-desktop {
+	display: none;
+	a {text-decoration: none;}
+}
+
+/* ==========================================================================
+   Panel Style
+   ========================================================================== */
+
+/* General */
+
+.contact-us {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.contact-us-form {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+.contact-us-form-desktop {
+	@include bia-panel-full-width-mobile;
+	@include lime-panel;
+}
+
+.contact-us-mobile {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+/* Home Page */
+
+.static-header {
+    @include bia-panel-full-width-mobile;
+    @include green-header;
+    height: $header-height;
+    background: transparent;
+    pointer-events: none;
+    color: white;
+    position: absolute; top: 0; left: 0;
+    .panel-content {
+    	padding-top: 40px;
+    	padding-bottom: 0;
+    }
+}
+
+.what-we-do {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+	.what-we-do-chart {
+			width: 100%;
+			display: block;
+			height: auto;
+			position: relative;
+			padding-top: 100%;
+		img {
+			position: absolute;
+			left: 0;
+		    top: 0;
+		}
+		svg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			}
+		}
+	}
+
+.how-can-bia {
+	@include bia-panel-full-width-mobile;
+	@include orange-panel;
+	h1 {font-size: 3.5em;}
+}
+
+.how-we-do-it {
+	@include bia-panel-full-width-mobile-two-column;
+	@include dark-grey-panel;
+	height: 950px;
+	.full-width {margin: 10px 0 0 0}
+	.how-we-do-it-chart {
+		position: relative;
+		width: 100%;
+		display: block;
+		height: auto;
+		padding-top: 100%;
+		img {
+			position: absolute;
+			left: 0px;
+		    top: 0px;
+		}
+		svg {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			}
+		}
+}
+
+.our-work {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+	.logos-grid-1, .logos-grid-2, .logos-grid-3, .logos-grid-4, .logos-grid-5 {@include two-column;}
+	.logos-grid-1, .logos-grid-2, .logos-grid-3, .logos-grid-4, .logos-grid-5 ul {margin: 0;}
+}	
+
+.clients {
+	@include bia-panel-full-width-mobile;
+}
+
+.about-us-1 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+	.employees {@include three-column;}
+		padding-bottom: 40px;
+}
+
+.about-us-2 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.what-we-have-to-say-posts-1 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.what-we-have-to-say-posts-2 {
+	.blog-post-image {max-width: initial;}
+	article:first-child {
+		@include bia-panel-full-width-mobile; 
+		@include dark-grey-panel;
+	}
+	article:last-child {
+		@include bia-panel-full-width-mobile; 
+		@include light-grey-panel;
+	}
+}
+
+.solid-panel-1, .solid-panel-2 {
+	padding: 20px 5% 20px 5%;
+	background: #95519e;
+	color: white;
+	width: 80%;
+}
+
+.contact-us-mobile-home {
+	@include bia-panel-full-width-mobile;
+	@include lime-panel;
+}
+
+/* Casillero del Diablo */
+
+.casillero-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.casillero-1 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.casillero-2 {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+.casillero-3 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.casillero-4 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}	
+
+.casillero-5 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.casillero-6 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.casillero-7 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.casillero-8 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.casillero-9 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.casillero-10 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+/* Dewars */
+
+.dewars-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.dewars-1 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.dewars-2 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.dewars-3 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.dewars-4 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.dewars-5 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.dewars-6 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.dewars-7 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.dewars-8 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.dewars-9 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.dewars-10 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+/* DHL */
+
+.dhl-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.dhl-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.dhl-2 {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+.dhl-3 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.dhl-4 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+/* Gordons */
+
+.gordons-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.gordons-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.gordons-2 {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+.gordons-3 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.gordons-4 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.gordons-5 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.gordons-6 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+/* Hublot */
+
+.hublot-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.hublot-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.hublot-2 {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+.hublot-3 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.hublot-4 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+/* Kuhmo – Fireworks */
+
+.kuhmo-fireworks-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.kuhmo-fireworks-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-fireworks-2 {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+.kuhmo-fireworks-3 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-fireworks-4 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+/* Kuhmo – Half Time */
+
+.kuhmo-half-time-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.kuhmo-half-time-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-half-time-2 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-half-time-3 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-half-time-4 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-half-time-5 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-half-time-6 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-half-time-7 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-half-time-8 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-half-time-9 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-half-time-10 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+/* Kuhmo – Hall of Fame */
+
+.kuhmo-hall-of-fame-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.kuhmo-hall-of-fame-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-hall-of-fame-2 {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+.kuhmo-hall-of-fame-3 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-hall-of-fame-4 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-hall-of-fame-5 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-hall-of-fame-6 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-hall-of-fame-7 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-hall-of-fame-8 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-hall-of-fame-9 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+/* Kuhmo – Play Safer */
+
+.kuhmo-play-safer-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.kuhmo-play-safer-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-play-safer-2 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-play-safer-3 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-play-safer-4 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-play-safer-5 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-play-safer-6 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-play-safer-7 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-play-safer-8 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-play-safer-9 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-play-safer-10 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-play-safer-11 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-play-safer-12 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-play-safer-13 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+
+/* Kuhmo – Tae Kwon Do */
+
+.kuhmo-tae-kwon-do-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.kuhmo-tae-kwon-do-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-tae-kwon-do-2 {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+.kuhmo-tae-kwon-do-3 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.kuhmo-tae-kwon-do-4 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.kuhmo-tae-kwon-do-5 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+/* MUML */
+
+.muml-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.muml-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.muml-2 {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+.muml-3 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.muml-4 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.muml-5 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.muml-6 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+/* Swissquote */
+
+.swissquote-header {
+	@include bia-panel-full-width-mobile;
+	@include green-header;
+}
+
+.swissquote-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.swissquote-2 {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+.swissquote-3 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+	.container {margin-bottom: 15px;}
+}
+
+.swissquote-4 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+/* Turkish Airlines */
+
+.turkish-airlines-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.turkish-airlines-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.turkish-airlines-2 {
+	@include bia-panel-full-width-mobile;
+	@include green-panel;
+}
+
+.turkish-airlines-3 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.turkish-airlines-4 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.turkish-airlines-5 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+/* Privacy Page */
+
+.privacy-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.privacy-1 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.privacy-2 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+}
+
+.privacy-3 {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.privacy-table {
+	width: 100%;
+	margin-bottom: 15px;
+	th, td {padding: 3px 6px;}
+	tr {
+		border-style: solid;
+	    border-width: 0 1px 1px 1px;
+	    border-color: #b3362b;
+	}
+}
+
+
+/* Blog Index Page */
+
+.blog-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+	.primary-content {
+		height: 150px;
+	}
+}
+
+.blog-index article {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.blog-index article:nth-child(even) {
+	@include light-grey-panel;
+}
+
+.more-posts {
+	@include light-grey-panel;
+	@include bia-panel-full-width-mobile;
+	.panel-content {padding-top: 25px;}
+	display: block;
+}
+
+.blog-index {
+	h2 {margin: 0; padding: 0;}
+}
+
+/* Blog Post Page */
+
+.blog-post-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.blog-post-container {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+	.primary-content {
+		h2 {margin-bottom: 5px}
+		p {margin-bottom: 20px}
+		li {margin-bottom: 60px}
+		img {width: 100%;}
+	}
+}
+
+.post {
+	padding-top: 90px;
+}
+
+.addthis_sharing_toolbox {
+	margin: 15px 0 0 0;
+}
+
+.blog-post-author {
+	@include dark-grey-panel;
+	padding: 30px 3.75%;
+	min-height: 200px;
+	img {
+		width: 150px;
+		margin-left: 5%;
+		padding-right: 15px;
+		float: left;
+	}
+	h1, h2, h3 {
+		margin-bottom: 5px;
+		margin-left: 5%;
+		}
+	p {
+		margin-left: 5%;
+		}	
+	}
+
+.addthis_sharing_toolbox {
+	margin: 15px 0 0 0;
+}	
+
+/* Blog Archive Page */
+
+.blog-archive article {
+	@include bia-panel-full-width-mobile;
+	@include dark-grey-panel;
+}
+
+.blog-archive article:nth-child(even) {
+	@include light-grey-panel;
+}
+
+/* The Activation Imperative Page */
+
+.the-activation-imperative-header {
+	@include green-header;
+	@include bia-panel-full-width-mobile;
+}
+
+.the-activation-imperative-1 {
+	@include bia-panel-full-width-mobile;
+	@include light-grey-panel;
+	li {
+		list-style: disc; 
+		padding: initial; 
+		display: list-item;
+		font-family: 'Museo Sans 300', serif;
+	    line-height: 1.5em;
+	    font-size: 1.1em;
+	}
+	ul {padding-left: 30px; margin-bottom: 15px;}
+}
+
+.activation-signup {
+	@include bia-panel-full-width-mobile;
+	@include lime-panel;
+	form {margin: 0;}
+}

@@ -1,0 +1,37 @@
+<perch:form action="#perch-reset" id="activation-signup" method="post" app="perch_forms">
+
+<h1>To receive your free copy, simply complete the form below.</h1>
+
+<fieldset>
+
+<div>
+<perch:label for="name">Name:</perch:label>
+<perch:input id="name" required="true" type="text" label="Name" />
+</div>
+
+<div>
+<perch:label for="position">Position:</perch:label>
+<perch:input id="position" required="true" type="text" label="Name" />
+</div>
+
+<div>
+<perch:label for="company">Company:</perch:label>
+<perch:input id="company" required="true" type="text" label="Name" />
+</div>
+
+<div>
+<perch:label for="email">Email:</perch:label>
+<perch:input id="email" required="true" type="text" label="Email" />
+</div>
+
+<div class="submit">
+<perch:input type="submit" id="submit" value="Submit" />
+</div>
+
+</fieldset>
+
+<perch:success>
+<perch:content id="activation-signup-thankyou" label="Success message" type="textarea" textile="true" editor="ckeditor" html="true" />
+</perch:success>
+
+</perch:form>

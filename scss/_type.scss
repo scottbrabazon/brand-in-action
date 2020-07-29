@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../fonts/BebasNeue.otf);
+    src: url(../fonts/BebasNeue-webfont.eot);
+    src: url(../fonts/bebasneue-webfont.woff);
+
+}
+
+@font-face {
+    font-family: 'Museo Sans 300';
+    src: url(../fonts/Museo300-Regular.otf);
+    src: url(../fonts/MuseoSans-300.eot);
+    src: url(../fonts/MuseoSans-300.woff);
+}
+
+h1 {
+    font-family: 'BebasNeue', serif;
+    font-size: 3.3em;
+    line-height: 0.9em;
+    margin: 0 0 15px 0;
+}
+
+h2 {
+    font-family: 'BebasNeue', serif;
+    font-size: 2em;
+    line-height: 1.2em;
+    margin: 0 0 20px 0;
+}
+
+h3 {
+    font-family: 'BebasNeue', serif;
+    margin: 0 0 5px 0;
+}
+
+p {
+    font-family: 'Museo Sans 300', serif;
+    line-height: 1.5em;
+    margin: 0 0 15px 0;
+    font-size: 1.1em;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {color: inherit;}
+
+th {
+    font-family: 'Museo Sans 300', serif;
+    line-height: 1em;
+    margin: 0 0 15px 0;
+    font-size: 1.1em;
+    background: #b3362b;
+    color: #FFF;
+}
+
+td {
+    font-family: 'Museo Sans 300', serif;
+    line-height: 1em;
+    margin: 0 0 15px 0;
+    font-size: 1.1em;
+}
+
+.menu a, .menu-clients a {
+    color: #FFFFFF;
+}
+
+.privacy-1 a, .privacy-2 a, .privacy-3 a, .blog-post-container a {
+    color: #b3362b;
+}
+
